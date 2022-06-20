@@ -73,3 +73,7 @@ SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db_name"
 ### Heroku
 
 ###  AWS-EC2, digital-ocean-droplets
+
+
+
+[check this mqtt web client tutorial](https://www.wut.de/e-577ww-07-apus-000.php)
