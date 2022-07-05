@@ -1,3 +1,8 @@
+
+
+
+postgres/database-data/*
+mosquitto/mosquitto_data/*
 # production secrets
 secrets.py
 

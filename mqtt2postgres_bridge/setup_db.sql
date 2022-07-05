@@ -6,11 +6,11 @@ CREATE TABLE mqtt (
 	id SERIAL PRIMARY KEY,
 	createdAt TIMESTAMP NOT NULL,
 	topic TEXT NOT NULL,
-	message TEXT,
+	message float(5),
 	qos NUMERIC(1) NOT NULL
 );
 
-CREATE FUNCTION InsertIntoMQTTTable(topic TEXT, message TEXT, qos NUMERIC(1)) RETURNS void AS $$
+CREATE FUNCTION InsertIntoMQTTTable(topic TEXT, message float(5), qos NUMERIC(1)) RETURNS void AS $$
 	BEGIN
 		INSERT INTO mqtt (createdAt, topic, message, qos)
 		VALUES (CURRENT_TIMESTAMP, topic, message, qos);

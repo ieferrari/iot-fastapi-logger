@@ -9,7 +9,7 @@ import psycopg2
 broker_source = "127.0.0.1"
 broker_source_port = 1883
 
-client_source = mqtt.Client("YourClientId")
+client_source = mqtt.Client()
 client_source.username_pw_set("admin", "admin")
 
 DatabaseHostName = 'localhost'
@@ -31,7 +31,7 @@ def insertIntoDatabase(message):
 	"Inserts the mqtt data into the database"
 	with connection.cursor() as cursor:
 		print("Inserting data: " + str(message.topic) + ";" + str(message.payload)[2:][:-1] + ";" + str(message.qos))
-		cursor.callproc('InsertIntoMQTTTable', [str(message.topic), str(message.payload)[2:][:-1], int(message.qos)])
+		cursor.callproc('InsertIntoMQTTTable', [str(message.topic), float(str(message.payload)[2:][:-1]), int(message.qos)])
 		connection.commit()
 
 def on_message(client, userdata, message):

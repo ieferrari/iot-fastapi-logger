@@ -1,0 +1,25 @@
+{
+    "id": 2,
+    "uid": "-6uVsn67k",
+    "orgId": 2,
+    "name": "PostgreSQL",
+    "type": "postgres",
+    "typeName": "PostgreSQL",
+    "typeLogoUrl": "public/app/plugins/datasource/postgres/img/postgresql_logo.svg",
+    "access": "proxy",
+    "url": "timescaleDB:5432",
+    "password": "",
+    "user": "admin",
+    "database": "mqtt",
+    "basicAuth": false,
+    "isDefault": true,
+    "jsonData": {
+        "postgresVersion": 903,
+        "sslmode": "disable",
+        "tlsAuth": false,
+        "tlsAuthWithCACert": false,
+        "tlsConfigurationMethod": "file-path",
+        "tlsSkipVerify": true
+    },
+    "readOnly": false
+}
